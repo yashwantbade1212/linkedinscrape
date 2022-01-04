@@ -18,8 +18,8 @@ username = driver.find_element_by_id("username")
 # In case of an error, try changing the element
 # tag used here.
 
-# Enter Your Email Address
-username.send_keys("Yashwantbade1212@gmail.com")
+# Enter Your Email Address(Create Your Fake ID)
+username.send_keys("demoscrape1212@gmail.com")
 
 # entering password
 pword = driver.find_element_by_id("password")
@@ -46,7 +46,7 @@ driver.get(profile_url)  # this will open the link
 
 
 start = time.time()
-  
+#profile will be scroll till end
 # will be used in the while loop
 initialScroll = 0
 finalScroll = 1000
@@ -82,4 +82,5 @@ soup = BeautifulSoup(src, 'lxml')
 # that contains the name, company name, and the location
 intro = soup.find('div', {'class': 'mt2 relative'})
 intro=intro.get_text().strip()
+#Data printing
 print(intro)
